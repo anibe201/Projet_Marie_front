@@ -1,0 +1,51 @@
+{
+  "name": "emarket-bd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.0.96",
+    "@stripe/stripe-js": "^1.42.1",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
+    "jspdf": "^2.5.1",
+    "pdfmake": "^0.2.6",
+    "primevue": "^2.10.0",
+    "serve-static": "^1.14.1",
+    "stripe": "^8.145.0",
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1",
+    "vue2-editor": "^2.10.2",
+    "vuesax": "^4.0.1-alpha.25",
+    "vuetify": "^2.6.0",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0-beta.3",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.12",
+    "@vue/cli-plugin-router": "^4.5.12",
+    "@vue/cli-plugin-vuex": "^4.5.12",
+    "@vue/cli-service": "^4.5.12",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.19.1",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.5.8",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
+  }
+}
