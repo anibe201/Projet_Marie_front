@@ -8,6 +8,7 @@
            <div class="card">
                <div class="d-flex flex-row p-2">
                    <div class="d-flex flex-column"> <span class="font-weight-bold">FACTURE DE COMMANDE OEUF</span> <small>INV-001</small> </div>
+               <hr />
                    
                </div>
                <div class="address p-2">
@@ -23,10 +24,11 @@
                                 Prénom : {{ factureInfo.infoUser.firstName }} <br /> 
                                 Contact : +225 01 40 99 04 99 <br /> 
                                 Email : {{ factureInfo.infoUser.email }} <br /> 
+                                Numero de commande : 01ODO-UPB <br /> 
                             </td>
                         </tr>
                     </tbody>
-                    {{ factureInfo }}
+                    <!-- {{ factureInfo }} -->
                 </table>
             </div>
                <hr />
@@ -51,30 +53,30 @@
                            <tr class="add">
                                <td class="text-center">Quantité</td>
                                <td class="text-center">Désignation</td>
-                               <td class="text-center">Prix unitaire</td>
+                               <td class="text-center">Prix unitaire (Fcfa)</td>
                                <td class="text-center">Montant HT (Fcfa)</td>
                                <td class="text-center"></td>
                            </tr>
                            <tr class="content">
-                               <td>Website Redesign</td>
-                               <td>Website Redesign</td>
-                               <td>15</td>
-                               <td>$1,500</td>
-                               <td class="text-center">$22,500</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td class="text-center">00,00</td>
                            </tr>
                            <tr class="content">
-                               <td>Logo & Identity</td>
-                               <td>Logo & Identity</td>
-                               <td>10</td>
-                               <td>$1,500</td>
-                               <td class="text-center">$15,000</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td class="text-center">00,00</td>
                            </tr>
                            <tr class="content">
-                               <td>Marketing Collateral</td>
-                               <td>Marketing Collateral</td>
-                               <td>3</td>
-                               <td>$1,500</td>
-                               <td class="text-center">$4,500</td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td></td>
+                               <td class="text-center">00,00</td>
                            </tr>
                        </tbody>
                    </table>
@@ -91,9 +93,9 @@
                            </tr>
                            <tr class="content">
                                <td></td>
-                               <td>$40,000</td>
-                               <td>18 %</td>
-                               <td class="text-center">$42,500</td>
+                               <td></td>
+                               <td></td>
+                               <td class="text-center">00,00</td>
                            </tr>
                        </tbody>
                    </table>
@@ -140,22 +142,18 @@
   
   created() {
     this.factureInfo = JSON.parse(localStorage.getItem("elmtFacture"));
-    console.log(factureInfo);
+    console.log(this.factureInfo);
   },
    
      methods: {
         printDocument() {
-      
-          
            //get table html
            const pdfTable = document.getElementById('divToPrint');
            //html to pdf format
            var html = htmlToPdfmake(pdfTable.innerHTML);
-         
            const documentDefinition = { content: html };
            pdfMake.vfs = pdfFonts.pdfMake.vfs;
            pdfMake.createPdf(documentDefinition).open();
-         
      }
  }  
  }
