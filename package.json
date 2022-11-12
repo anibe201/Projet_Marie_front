@@ -16,6 +16,7 @@
     "connect-history-api-fallback": "^1.6.0",
     "express": "^4.17.1",
     "express-sslify": "^1.2.0",
+    "html-to-pdfmake": "^2.4.9",
     "jspdf": "^2.5.1",
     "pdfmake": "^0.2.6",
     "primevue": "^2.10.0",

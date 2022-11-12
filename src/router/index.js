@@ -28,6 +28,7 @@ import AProfile from "@/views/Admin/AProfile.vue";
 import AddProduct from "@/views/Admin/AddProduct.vue";
 import Unauthorized from "@/views/ErrorPage/Unauthorized.vue";
 import NotFound from "@/views/ErrorPage/NotFound.vue";
+import Homeview from "@/views/HomeView.vue";
 
 
 // import produits from "../views/admin_/admin_products.vue";
@@ -60,6 +61,12 @@ const routes = [
     path: "/products",
     name: "all-products",
     component: AllProducts,
+    meta: { title: "E Market BD | Products page" }
+  },
+  {
+    path: "/homview",
+    name: "home-view",
+    component: Homeview,
     meta: { title: "E Market BD | Products page" }
   },
   {
