@@ -35,7 +35,7 @@
         />
       </b-col>
     </b-row> -->
-    <b-row class="mt-5">
+    <!-- <b-row class="mt-5">
       <b-col
         v-for="showcaseBigCard in showcaseBigCards"
         :key="showcaseBigCard.id"
@@ -47,7 +47,7 @@
           :src="showcaseBigCard.image"
         />
       </b-col>
-    </b-row>
+    </b-row> -->
   </div>
 </template>
 
