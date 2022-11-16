@@ -1,8 +1,8 @@
 <template>
   <div>
     <TopHeader />
-    <SecondHeader />
-    <b-container>
+    <SecondHeader style="display: flex; justify-content: center; align-items: center"/>
+    <b-container style="margin-top: -24px">
       <Showcase class="mt-3" />
       <TopSellProduct class="mt-5" />
       <NewAddProduct class="mt-5" />

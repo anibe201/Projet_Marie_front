@@ -17,6 +17,7 @@
     
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
+            <!-- <SecondHeader /> -->
             <b-nav-form>
               <b-dropdown id="dropdown-left" :text="searchCategoryName" size="sm" variant="primary" class="m-2">
                 <b-dropdown-item @click="set_category({ id: 0, name: 'All Category' })" >Tout</b-dropdown-item>
@@ -98,12 +99,16 @@
 
 <script>
 import SideBar from "../Common/sidbarMenu.vue";
+// import SecondHeader from "@/components/Home/SecondHeader.vue";
+
 
 /* eslint-disable */
 export default {
   name: "TopHeader",
   components: {
-    SideBar
+    SideBar,
+    // SecondHeader,
+
   },
   data() {
     return {

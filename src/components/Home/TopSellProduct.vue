@@ -20,7 +20,7 @@
                         <a class="text-default mb-2" data-abc="true" @click="$router.push({ path: `/product/${product.id}` })">{{ product.title }}</a>
                       </h6>
                       <!-- Categorie -->
-                      <a href="#" class="text-muted" data-abc="true">Laptops & Notebooks</a>
+                      <a class="text-muted" data-abc="true">Catégorie : #</a>
                     </div>
                     <h3 class="mb-0 font-weight-semibold">{{ product.amount }} Fcfa</h3>
                     <div>

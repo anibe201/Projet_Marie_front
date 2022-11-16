@@ -1,44 +1,20 @@
 <template>
-  <div style="background-color: #17a2b8; margin-top: 20px" >
-    <b-row align-v="center" class="text-center"> 
-      <div class="hidden">
-        <!-- <vs-button @click="activeSidebar = !activeSidebar" v-model="active" flat icon>
-          <i class='bx bx-menu'></i> Catégorie
-        </vs-button> -->
-    <vs-sidebar
-      absolute
-      v-model="active"
-      :open.sync="activeSidebar"
-      >
-      <template #logo>
-        <!-- ...img logo -->
-      </template>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-
-
-  <b-row
-     v-for="category in categoryListRow1"
-     :key="category.id"
-    style="margin-left: 10px"
-  >
-        <b-dropdown
+  <div>
+    <template>
+      <div class="center">
+        <vs-button @click="active=!active">
+          Aller aux Catégories
+        </vs-button>
+        <vs-dialog scroll overflow-hidden not-close auto-width v-model="active">
+          <template #header>
+            <h4>
+              Catégories d'oeuf
+            </h4>
+          </template>
+          <div class="con-content">
+            <div class="row">
+              <div class="col-md-4 mt-2" v-for="category in categoryListRow1" :key="category.id">
+                <b-dropdown
   class="mb-1"
   size="sm"
   @click="categorySelect(category)"
@@ -82,15 +58,13 @@
             </div>
           </b-dropdown>
         </div>
-      </b-dropdown>
-</b-row>
+                </b-dropdown>
+              </div>
+            </div>
 
-<b-row
-v-for="category in categoryListRow2"
-:key="category.id"
-style="margin-left: 10px"
->
-<b-dropdown
+            <div class="row">
+              <div class="col-md-4 mt-2" v-for="category in categoryListRow2" :key="category.id">
+                <b-dropdown
   class="mb-1"
   size="sm"
   @click="categorySelect(category)"
@@ -136,71 +110,12 @@ style="margin-left: 10px"
     </b-dropdown>
   </div>
 </b-dropdown>
-</b-row>
-
-
-
-
-
-      <template #footer>
-        <vs-row justify="space-between">
-          <vs-avatar>
-            <img src="/avatars/avatar-5.png" alt="">
-          </vs-avatar>
-
-          <vs-avatar badge-color="danger" badge-position="top-right">
-            <i class='bx bx-bell' ></i>
-
-            <template #badge>
-              28
-            </template>
-          </vs-avatar>
-        </vs-row>
-      </template>
-    </vs-sidebar>
+              </div>
+            </div>
+          </div>
+        </vs-dialog>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- <SideBar /> -->
-
-
-    </b-row>
-    <div style="display: flex; justify-content: center; align-items: center">
-      <b-button
-        class="ml-4"
-        variant="transparent"
-        @click="activeSidebar = !activeSidebar" v-model="active"
-        
-      >
-        <b-icon variant="white" icon="chevron-double-down" /> Voir les catégories
-      </b-button>
-    </div>
+    </template>
   </div>
 </template>
 
@@ -213,8 +128,12 @@ export default {
   components: {SideBar},
   data() {
     return {
+      active: false,
+      input1: '',
+      input2: '',
+      checkbox1: false,
       categoryList: [],
-      categoryeachRow: 6,
+      categoryeachRow: 10,
       categoryListRow1: [],
       categoryListRow2: [],
       subCategoryList: [],
