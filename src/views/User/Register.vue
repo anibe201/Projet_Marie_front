@@ -223,6 +223,11 @@ export default {
           email: this.email,
           password: this.password
         });
+        console.log(user.data.token);
+
+        const token = user.data.token
+        localStorage.setItem("Token", JSON.stringify(token))
+
         this.$store.dispatch("CurrentUser/setNewUserId", user.data.id);
         this.$store.dispatch("CurrentUser/setNewUserEmail", this.email);
 

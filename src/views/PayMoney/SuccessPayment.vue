@@ -322,11 +322,18 @@ export default {
            const documentDefinition = { content: html };
            pdfMake.vfs = pdfFonts.pdfMake.vfs;
            pdfMake.createPdf(documentDefinition).open();
-           localStorage.removeItem("Cart");
+           pdfMake.createPdf(documentDefinition).download();
 
      }
   },
-  computed: {}
+  computed: {},
+  destroyed() {
+    console.log(`At this point, watchers, child components, and event listeners have been torn down.`)
+    localStorage.removeItem("elmtFacture");
+    localStorage.removeItem("vuex/Cart");
+    this.$store.dispatch("Cart/clearCart");
+
+  }
 };
 </script>
 

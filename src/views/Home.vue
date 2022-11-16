@@ -32,7 +32,13 @@ export default {
     Support,
     Footer
   },
-  mounted() {}
+  mounted() {
+    if(localStorage.getItem("Token") != null) {
+      localStorage.removeItem("Token");
+    } else {
+      return;
+    }
+  }
 };
 </script>
 

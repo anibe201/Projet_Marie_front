@@ -138,7 +138,7 @@ export default {
       categoryListRow2: [],
       subCategoryList: [],
       subSubCategoryList: [],
-      active: 'home',
+      // active: 'home',
     activeSidebar: false
       
     };

@@ -86,6 +86,8 @@ export default {
   async mounted() {
     this.userId = this.$store.state.CurrentUser.newUserId;
     this.userEmail = this.$store.state.CurrentUser.newUserEmail;
+
+    this.registerToken = JSON.parse(localStorage.getItem("Token"));
   },
   methods: {
     async tryAgain() {

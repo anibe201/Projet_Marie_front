@@ -2,14 +2,14 @@
   <div>
     <b-row>
       <b-col>
-        <h5>Public profile</h5>
+        <h5>Profil utilisateur</h5>
       </b-col>
     </b-row>
     <hr class="my-2" />
     <b-row class="mt-3">
       <b-col cols="7">
         <div>
-          <strong>Name</strong>
+          <strong>Nom</strong>
           <b-badge
             pill
             class="ml-2"
@@ -25,7 +25,7 @@
           <b-button @click="changeName" variant="white" class="ml-1" size="sm">
             <b-icon
               v-b-tooltip.hover
-              title="change name"
+              title="Changer le nom"
               scale="0.8"
               icon="pen"
             />
@@ -38,7 +38,7 @@
               <b-col>
                 <b-form-input
                   size="sm"
-                  placeholder="First Name"
+                  placeholder="Prenom"
                   v-model="firstName"
                   required
                 />
@@ -46,7 +46,7 @@
               <b-col>
                 <b-form-input
                   size="sm"
-                  placeholder="Last Name"
+                  placeholder="Nom"
                   v-model="lastName"
                   required
                 />
@@ -55,7 +55,7 @@
             <b-row class="mt-2">
               <b-col>
                 <b-button size="sm" type="submit" variant="warning">
-                  Save
+                  Sauvegarder
                 </b-button>
                 <b-button
                   class="ml-2"
@@ -63,7 +63,7 @@
                   size="sm"
                   variant="outline-danger"
                 >
-                  Cancel
+                  Annuler
                 </b-button>
               </b-col>
             </b-row>
@@ -72,7 +72,7 @@
 
         <div>
           <div class="mt-3">
-            <strong>Username</strong>
+            <strong>Nom d'utilisateur</strong>
             <b-button
               v-if="!user.username"
               @click="changeUserName"
@@ -82,7 +82,7 @@
             >
               <b-icon
                 v-b-tooltip.hover
-                title="Add username"
+                title="Ajouter un nom d'utilisateur"
                 scale="0.8"
                 icon="pen"
               />
@@ -98,7 +98,7 @@
             >
               <b-icon
                 v-b-tooltip.hover
-                title="Change username"
+                title="Changer le nom d'utilisateur"
                 scale="0.8"
                 icon="pen"
               />
@@ -110,7 +110,7 @@
                 <b-col cols="6">
                   <b-form-input
                     size="sm"
-                    placeholder="Username"
+                    placeholder="Nom d'utilisateur"
                     v-model="userName"
                     debounce="500"
                     @update="checkUserName"
@@ -150,7 +150,7 @@
           {{ user.email }}
         </div>
         <div class="mt-3">
-          <strong>Password</strong>
+          <strong>Mot de passe</strong>
         </div>
         <div class="mt-1">
           ********
@@ -162,7 +162,7 @@
           >
             <b-icon
               v-b-tooltip.hover
-              title="change password"
+              title="changer le mot de passe"
               scale="0.8"
               icon="pen"
             />
@@ -170,7 +170,7 @@
         </div>
         <b-modal
           @shown="$refs.currentPasswordField.focus()"
-          title="Change password"
+          title="Changer le mot de passe"
           id="modalUpdatePassword"
           hide-footer
         >
@@ -201,7 +201,7 @@
                 v-if="!currentPassword"
                 :state="validCurrentPassword && currentPasswordValidation"
               >
-                Current password field can't be empty!
+              Le champ du mot de passe actuel ne peut pas être vide !
               </b-form-invalid-feedback>
             </b-form-group>
             <b-form-group
@@ -221,14 +221,14 @@
                 v-if="newPassword"
                 :state="newPasswordValidation"
               >
-                New password must have 8-32 character long, contain letters,
-                numbers and must not contain space.
+              Le nouveau mot de passe doit comporter entre 8 et 32 caractères, contenir des lettres,
+              chiffres et ne doit pas contenir d'espace.
               </b-form-invalid-feedback>
               <b-form-invalid-feedback
                 v-if="!newPassword"
                 :state="newPasswordValidation"
               >
-                Password field can't be empty!
+              Le champ du mot de passe actuel ne peut pas être vide !
               </b-form-invalid-feedback>
             </b-form-group>
             <b-form-group
@@ -247,25 +247,25 @@
                 v-if="confirmPassword"
                 :state="confirmPasswordValidation"
               >
-                Password didn't match
+              Le mot de passe ne correspond pas
               </b-form-invalid-feedback>
               <b-form-invalid-feedback
                 v-if="!confirmPassword"
                 :state="confirmPasswordValidation"
               >
-                Password field can't be empty!
+              Le champ du mot de passe actuel ne peut pas être vide !
               </b-form-invalid-feedback>
             </b-form-group>
             <b-row class="mt-4">
               <b-col cols="4" />
               <b-col cols="4">
                 <b-button type="reset" block variant="danger">
-                  Reset
+                  Vider
                 </b-button>
               </b-col>
               <b-col cols="4">
                 <b-button block type="submit" variant="success">
-                  Submit
+                  Envoyer
                 </b-button>
               </b-col>
             </b-row>

@@ -2,7 +2,7 @@
   <div>
     <b-row v-if="topSellProduct.length != 0">
       <b-col>
-        <h3>{{ topSellViewTitle }}</h3>
+        <h3 style="display: flex; justify-content: center; align-items: center">{{ topSellViewTitle }}</h3>
         <hr />
         <b-row>      
           <div class="container d-flex justify-content-center mt-50 mb-50">

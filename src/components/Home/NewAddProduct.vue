@@ -2,7 +2,7 @@
   <div>
     <b-row v-if="newAddProduct.length != 0">
       <b-col>
-        <h3>{{ newAddViewTitle }}</h3>
+        <h3 style="display: flex; justify-content: center; align-items: center">{{ newAddViewTitle }}</h3>
         <hr />
         <b-row>
           <div class="col-md-4 mt-2" v-for="product in newAddProduct" :key="product.id"> 
